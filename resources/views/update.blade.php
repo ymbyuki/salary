@@ -1,10 +1,6 @@
 @extends('layouts.main')
 
 @section('content')
-<script src="{{ mix('js/main.js') }}"></script>
-
-
-
 <div class="flex justify-center min-h-screen items-center bg-gray-100">
     <div class="w-full pb-12 bg-white sm:m-24 m-12">
         <div class="text-lg text-center py-2 bg-blue-500 text-white inline-block w-full">
@@ -39,4 +35,10 @@
         </form>
     </div>
 </div>
+
+<script>
+    function attention() {
+        document.getElementById('button').disabled = true;
+    }
+</script>
 @endsection

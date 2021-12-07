@@ -44,4 +44,10 @@
         </form>
     </div>
 </div>
+
+<script>
+    function attention() {
+        document.getElementById('button').disabled = true;
+    }
+</script>
 @endsection

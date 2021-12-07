@@ -5,7 +5,7 @@
 
 
 <div class="flex justify-center min-h-screen items-center bg-gray-100">
-    <div class="shadow bg-white">
+    <div class="shadow bg-white w-full sm:w-1/2 pb-4 sm:m-24 m-12">
         <div class="text-lg text-center py-2 bg-blue-500 text-white inline-block w-full">
             <p>登録完了</p>
         </div>
