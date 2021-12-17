@@ -7,6 +7,9 @@ module.exports = {
     ],
     darkMode: false, // or 'media' or 'class'
     theme: {
+        backgroundColor: theme => ({
+            'pantone': '#D3927E',
+        }),
         extend: {},
     },
     variants: {

@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <nav class="font-sans bg-white text-center flex justify-between items-center sm:px-8 px-4 py-4 fixed w-full">
+    <nav class="font-sans bg-white opacity-70 text-center flex justify-between items-center sm:px-8 px-4 py-4 fixed w-full">
         <a href="/">
             <img src="{{ asset('img/logo.svg') }}" class="h-10" alt="logo">
         </a>
@@ -28,15 +28,32 @@
             <li><a href="/register" class="bg-black hover:bg-text-gray-800 text-white ml-4 py-2 px-3">登録</a></li>
         </ul>
     </nav>
-    <section class="font-sans h-screen w-full bg-cover text-center flex flex-col items-center justify-center object-cover" style="background:url(img/bg.jpg) no-repeat right; background-size: cover;">
+    <!-- <section class="font-sans h-screen w-full bg-cover text-center flex flex-col items-center justify-center object-cover" style="background:url(img/bg.jpg) no-repeat right; background-size: cover;">
         <img src="{{ asset('img/logo.svg') }}" alt="" class="h-24">
         <h3 class="text-black mx-auto max-w-sm mt-4 font-normal text-2xl leading-normal">103万円の壁と戦おう</h3>
+    </section> -->
+
+
+    <section class="font-sans h-screen w-full bg-cover text-center flex flex-col items-center justify-center object-cover" style="background:url(img/bg-1.jpg) no-repeat right; background-size: cover;">
+        <div class="grid sm:grid-cols-2 items-center text-center px-16 sm:mt-0 mt-36">
+            <div class="m-auto">
+            <img src="{{ asset('img/logo.svg') }}" alt="" class="h-24">
+                <p class="mt-4 text-xl">103万円の壁と戦おう</p>
+            </div>
+            <div class="">
+                <img src="/img/moc.png" alt="" class="">
+            </div>
+        </div>
     </section>
+
+
+
     <section class="font-sans text-center my-16 ">
         <h1 class="capitalize font-medium pb-4 text-xl">Salaryにログインする</h1>
         <a href="/login" class="bg-black hover:bg-gray-900 text-white hover:text-white py-3 px-6 uppercase text-xs tracking-wide">ログイン</a>
     </section>
-    <section class="bg-gray-200 font-sans">
+
+    <section class="bg-pantone font-sans">
         <div class="flex flex-col md:flex-row sm:mx-36 mx-12 items-center">
             <div class="flex flex-col w-full lg:w-1/2 justify-center items-start py-8">
                 <h1 class="my-4 font-normal text-2xl">Salaryとは</h1>
