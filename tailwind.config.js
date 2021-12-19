@@ -7,10 +7,16 @@ module.exports = {
     ],
     darkMode: false, // or 'media' or 'class'
     theme: {
-        backgroundColor: theme => ({
-            'pantone': '#D3927E',
-        }),
-        extend: {},
+        extend: {
+            colors: {
+                // pantone: '#D3927E',
+                // pantone_blue: '#6869AC',
+                pantone: {
+                    orange: '#D3927E',
+                    blue: '#6869AC',
+                }
+            },
+        }
     },
     variants: {
         extend: {},
