@@ -1,0 +1,7 @@
+.hide {
+    transform: translateY(-100%);
+}
+
+#scrollArea {
+    transition: .5s;
+}

@@ -66,8 +66,6 @@ class SalaryController extends Controller
      */
     public function show(Request $request)
     {
-        // $id = $request->id;
-        // $salary=Salary::where('id', $id)->get();
         $data = $request;
         $salary = new Salary;
         $content = $salary->getSalary($data->id);

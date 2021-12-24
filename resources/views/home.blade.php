@@ -10,15 +10,17 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
     <!-- Styles -->
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}" defer></script>
+    <script src="{{ mix('js/main.js') }}" defer></script>
 </head>
 
 <body>
-    <nav class="font-sans bg-white text-center flex justify-between items-center sm:px-8 px-4 py-4 fixed w-full">
+    <nav id="scrollArea" class="font-sans bg-pantone-orange shadow text-center flex justify-between items-center sm:px-8 px-4 py-4 fixed w-full">
         <a href="/">
-         <img src="{{ asset('img/logo.svg') }}" class="h-10" alt="logo">
+            <img src="{{ asset('img/logo.svg') }}" class="h-10" alt="logo">
         </a>
         <ul class="text-sm text-gray-700 list-none p-0 flex items-center">
             <li><a href="/login" class="inline-block py-2 px-3 text-gray-900 hover:text-gray-700 ">ログイン</a></li>
@@ -28,7 +30,7 @@
     <section class="font-sans h-screen w-full bg-cover text-center flex flex-col items-center justify-center object-cover" style="background:url(img/bg-1.jpg) no-repeat right; background-size: cover;">
         <div class="grid sm:grid-cols-2 items-center text-center px-16 sm:mt-0 mt-36">
             <div class="m-auto">
-            <img src="{{ asset('img/logo.svg') }}" alt="" class="h-24">
+                <img src="{{ asset('img/logo.svg') }}" alt="" class="h-24">
                 <p class="mt-4 text-xl">103万円の壁と戦おう</p>
             </div>
             <div class="">
@@ -43,6 +45,7 @@
     </section>
 
     <section class="bg-pantone-orange font-sans">
+
         <div class="flex flex-col md:flex-row sm:mx-36 mx-12 items-center">
             <div class="flex flex-col w-full lg:w-1/2 justify-center items-start py-8">
                 <h1 class="my-4 font-normal text-2xl">Salaryとは</h1>
@@ -57,13 +60,42 @@
 
     <footer class="font-sans bg-white py-8 px-4">
         <div class="mx-auto container overflow-hidden flex flex-col md:flex-row justify-between pb-4 text-center md:text-left">
-        <a href="/">
-            <img src="{{ asset('img/logo.svg') }}" class="h-10" alt="logo">
-        </a>
+            <a href="/">
+                <img src="{{ asset('img/logo.svg') }}" class="h-10" alt="logo">
+            </a>
         </div>
         <div class="pt-4 mt-4 text-gray-700 text-xs border-t border-gray-300 text-center"> ©2021 Salary. MuTec. All rights reserved.
         </div>
     </footer>
+
+    <script>
+        // var startPos = 0,
+        //     winScrollTop = 0;
+        // // scrollイベントを設定∂
+        // window.addEventListener('scroll', function() {
+        //     winScrollTop = this.scrollY;
+        //     if (winScrollTop >= startPos) {
+        //         // 下にスクロールされた時
+        //         if (winScrollTop >= 200) {
+        //             // 下に200pxスクロールされたら隠す
+        //             document.getElementById('scrollArea').classList.add('hide');
+        //         }
+        //     } else {
+        //         // 上にスクロールされた時
+        //         document.getElementById('scrollArea').classList.remove('hide');
+        //     }
+        //     startPos = winScrollTop;
+        // });
+    </script>
+    <style>
+        .hide {
+            transform: translateY(-100%);
+        }
+
+        #scrollArea {
+            transition: .5s;
+        }
+    </style>
 </body>
 
 </html>

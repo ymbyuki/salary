@@ -9,11 +9,11 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                // pantone: '#D3927E',
-                // pantone_blue: '#6869AC',
                 pantone: {
                     orange: '#D3927E',
                     blue: '#6869AC',
+                    green: '#85A195',
+                    red: '#8A4B5E',
                 }
             },
         }
