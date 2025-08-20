@@ -5,23 +5,23 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "require": {
-        "php": "^7.3|^8.0",
+        "php": "^8.0",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
-        "laravel-lang/lang": "~8.0",
-        "laravel/framework": "^8.65",
-        "laravel/jetstream": "^2.4",
-        "laravel/sanctum": "^2.11",
-        "laravel/tinker": "^2.5",
-        "livewire/livewire": "^2.5",
+        "laravel-lang/lang": "~9.0",
+        "laravel/framework": "^9.0",
+        "laravel/jetstream": "^2.16",
+        "laravel/sanctum": "^3.0",
+        "laravel/tinker": "^2.7",
+        "livewire/livewire": "^2.12",
         "sendgrid/sendgrid": "^7.11"
     },
     "require-dev": {
-        "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
-        "laravel/sail": "^1.0.1",
+        "laravel/pint": "^1.0",
+        "laravel/sail": "^1.16",
         "mockery/mockery": "^1.4.4",
-        "nunomaduro/collision": "^5.10",
+        "nunomaduro/collision": "^6.0",
         "phpunit/phpunit": "^9.5.10"
     },
     "autoload": {
@@ -62,10 +62,15 @@
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
-        "sort-packages": true
+        "sort-packages": true,
+        "github-protocols": ["https"]
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
-
-
+    "prefer-stable": true,
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.org"
+        }
+    }
 }
