@@ -177,6 +177,38 @@ composer update
 2. データベースサーバーが起動していることを確認
 3. データベースとユーザーが正しく作成されていることを確認
 
+## セットアップの確認
+
+すべてのインストールが完了したら、以下のコマンドで動作確認を行ってください：
+
+### 1. 依存関係の確認
+
+```bash
+composer show
+npm list --depth=0
+```
+
+### 2. アプリケーションキーの確認
+
+```bash
+php artisan config:cache
+php artisan config:clear
+```
+
+### 3. データベース接続の確認
+
+```bash
+php artisan migrate:status
+```
+
+### 4. アセットのコンパイル確認
+
+```bash
+npm run dev
+```
+
+成功すると `public/css/app.css` と `public/js/app.js` が生成されます。
+
 ## 開発者向け情報
 
 ### テストの実行
@@ -195,6 +227,17 @@ php artisan test
 
 ```bash
 ./vendor/bin/sail up
+```
+
+### キャッシュのクリア
+
+開発中に設定やルート、ビューのキャッシュをクリアする場合：
+
+```bash
+php artisan cache:clear
+php artisan config:clear
+php artisan route:clear
+php artisan view:clear
 ```
 
 ## ライセンス
